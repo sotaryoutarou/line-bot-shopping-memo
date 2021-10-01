@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// LINE メッセージ受信
+// LINE webhook revieve
 Route::post('/line/webhook', 'LineMessengerController@webhook')->name('line.webhook');
 
-// LINE メッセージ送信用
+// LINE message send
 Route::get('/line/message', 'LineMessengerController@message');
