@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // LINE webhook revieve
-Route::post('/line/webhook', 'LineMessengerController@webhook')->name('line.webhook');
+Route::post('/line/webhook', 'App\Http\Controllers\LineMessengerController@webhook')->name('line.webhook');
 
 // LINE message send
-Route::get('/line/message', 'LineMessengerController@message');
+Route::get('/line/message', 'App\Http\Controllers\LineMessengerController@message');
