@@ -21,9 +21,14 @@ class LineMessengerController extends Controller
                     'content' => $event['message']['text'],
                     'line_user_id' => $event['source']['userId']
                 ]);
+
+                $memos = Memo::all();
+
+                $bot = app('line-bot');
+                $result = $bot->replyText($event['replyToken'], $memos->implode('content', "\n"));
             }
         }
-        
+
     }
 
     /**
