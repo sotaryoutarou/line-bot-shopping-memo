@@ -12,9 +12,3 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-// LINE webhook revieve
-Route::post('/line/webhook', 'LineMessengerController@webhook')->name('line.webhook');
-
-// LINE message send
-Route::get('/line/message', 'LineMessengerController@message');

@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// LINE webhook revieve
+Route::post('/line/webhook', 'LineMessengerController@webhook')->name('line.webhook');
+
+// LINE message send
+Route::get('/line/message', 'LineMessengerController@message');
