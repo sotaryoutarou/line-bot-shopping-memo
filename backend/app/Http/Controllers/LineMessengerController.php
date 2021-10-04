@@ -28,16 +28,5 @@ class LineMessengerController extends Controller
                 $result = $bot->replyText($event['replyToken'], $memos->implode('content', "\n"));
             }
         }
-
-    }
-
-    /**
-     * lineメッセージ受信用
-     *
-     * @param  Request $request
-     * @return void
-     */
-    public function message(Request $request) {
-
     }
 }
