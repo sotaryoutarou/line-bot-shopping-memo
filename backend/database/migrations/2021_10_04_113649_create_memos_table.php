@@ -15,7 +15,7 @@ class CreateMemosTable extends Migration
     {
         Schema::create('memos', function (Blueprint $table) {
             $table->id();
-            $table->string('line_user_id', 64)->unique();
+            $table->string('line_user_id', 64);
             $table->string('content', 128);
             $table->softDeletes();
             $table->timestamps();
