@@ -1,0 +1,12 @@
+input[type="checkbox"]{
+  vertical-align:middle;
+}
+
+.block {
+    display: block;
+    position: relative;
+}
+
+.block div {
+    transform: translate(0%,-50%);
+}
